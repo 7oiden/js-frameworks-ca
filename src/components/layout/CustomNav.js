@@ -4,10 +4,11 @@ import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
-import LogoutLink from "../logout/LogoutLink";
+import LoginLink from "../login/LoginLink";
+import LogoutLink from "../login/LogoutLink";
 
 export default function CustomNav(props) {
-  const { home, contact, login } = props
+  const { home, contact, login } = props;
   const [auth, setAuth] = useContext(AuthContext);
 
   return (
@@ -21,10 +22,7 @@ export default function CustomNav(props) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link
-              to="/"
-              className={home ? "nav-link active" : "nav-link"}
-            >
+            <Link to="/" className={home ? "nav-link active" : "nav-link"}>
               Home
             </Link>
             <Link
@@ -33,15 +31,11 @@ export default function CustomNav(props) {
             >
               Contact
             </Link>
-            {/* <Link to="/admin" className="nav-link">
-              Admin
-            </Link> */}
-            <Link
-              to="/login"
-              className={login ? "nav-link active" : "nav-link"}
-            >
-              {auth ? <LogoutLink /> : "Login"}
-            </Link>
+            {auth ? (
+              <LogoutLink />
+            ) : (
+              <LoginLink login={login} />
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

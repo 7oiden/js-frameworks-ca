@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <Layout home>
       <Heading>Home</Heading>
+      <p>Welcome to the homepage</p>
       <ContentList />
     </Layout>
   );
