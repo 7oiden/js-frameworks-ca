@@ -7,6 +7,7 @@ import AuthContext from "../../context/AuthContext";
 import LogoutLink from "../logout/LogoutLink";
 
 export default function CustomNav(props) {
+  const { home, contact, login } = props
   const [auth, setAuth] = useContext(AuthContext);
 
   return (
@@ -22,13 +23,13 @@ export default function CustomNav(props) {
           <Nav className="me-auto">
             <Link
               to="/"
-              className={props.home ? "nav-link active" : "nav-link"}
+              className={home ? "nav-link active" : "nav-link"}
             >
               Home
             </Link>
             <Link
               to="/contact"
-              className={props.contact ? "nav-link active" : "nav-link"}
+              className={contact ? "nav-link active" : "nav-link"}
             >
               Contact
             </Link>
@@ -37,7 +38,7 @@ export default function CustomNav(props) {
             </Link> */}
             <Link
               to="/login"
-              className={props.login ? "nav-link active" : "nav-link"}
+              className={login ? "nav-link active" : "nav-link"}
             >
               {auth ? <LogoutLink /> : "Login"}
             </Link>

@@ -5,6 +5,7 @@ import Login from "./components/pages/Login";
 import Admin from "./components/pages/Admin";
 import "./sass/style.scss";
 import Contact from "./components/pages/Contact";
+import ContentDetails from "./components/content/ContentDetails";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          {/* <Route path="/detail/:param" element={<Detail />}></Route> */}
+          <Route path="/detail/:param" element={<ContentDetails />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/admin" element={<Admin />}></Route>
