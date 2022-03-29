@@ -56,45 +56,47 @@ export default function Login() {
   }
 
   return (
-    <Layout>
+    <Layout login>
       <Heading>Login</Heading>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        {loginError && (
-          <AlertMessage
-            variant="warning"
-            message="Username and/or password is incorrect"
-          />
-        )}
-        <fieldset disabled={submitting}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Username</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Username"
-              {...register("username")}
+      <div className="form-container">
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          {loginError && (
+            <AlertMessage
+              variant="warning"
+              message="Username and/or password is incorrect"
             />
-            {errors.username && (
-              <FormError>{errors.username.message}</FormError>
-            )}
-          </Form.Group>
+          )}
+          <fieldset disabled={submitting}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Username</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Username"
+                {...register("username")}
+              />
+              {errors.username && (
+                <FormError>{errors.username.message}</FormError>
+              )}
+            </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Password"
-              {...register("password")}
-            />
-            {errors.password && (
-              <FormError>{errors.password.message}</FormError>
-            )}
-          </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Password"
+                {...register("password")}
+              />
+              {errors.password && (
+                <FormError>{errors.password.message}</FormError>
+              )}
+            </Form.Group>
 
-          <Button variant="primary" type="submit">
-            {submitting ? "Wait..." : "Login"}
-          </Button>
-        </fieldset>
-      </Form>
+            <Button variant="primary" type="submit">
+              {submitting ? "Wait..." : "Login"}
+            </Button>
+          </fieldset>
+        </Form>
+      </div>
     </Layout>
   );
 }

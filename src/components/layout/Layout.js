@@ -1,15 +1,19 @@
 import Container from "react-bootstrap/Container";
 import CustomNav from "./CustomNav";
 
-export default function Layout({ children }) {
+export default function Layout({ children, home, contact, login }) {
   return (
     <>
-      <header></header>
-      <CustomNav />
-      <main>
-        <Container>{children}</Container>
-      </main>
-      <footer></footer>
+      <div className="flex-wrapper">
+        <header></header>
+        <CustomNav home={home} contact={contact} login={login} />
+        <main>
+          <Container>{children}</Container>
+        </main>
+      </div>
+      <footer>
+        <span>JS Frameworks - Tommy Johnsen 2022</span>
+      </footer>
     </>
   );
 }

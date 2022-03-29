@@ -10,3 +10,13 @@
   font-size: 1.125rem;
   margin-left: 1rem;
 }
+
+.brand-link {
+  text-decoration: none;
+  color: goldenrod;
+  margin-right: 1rem;
+
+  &:hover {
+    color: goldenrod;
+  }
+}

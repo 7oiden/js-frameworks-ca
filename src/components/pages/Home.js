@@ -3,7 +3,7 @@ import Layout from "../layout/Layout";
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout home>
       <Heading>Home</Heading>
     </Layout>
   );
