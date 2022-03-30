@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { CONTENT_URL } from "../../constants/api";
+import { PRODUCTS_URL } from "../../constants/api";
 import axios from "axios";
 import Loader from "../common/Loader";
 import AlertMessage from "../common/AlertMessage";
@@ -21,10 +21,7 @@ export default function ContentDetails() {
     history("/");
   }
 
-  const detailsUrl =
-    "https://api.rawg.io/api/games/" +
-    param +
-    "?key=54582cd735a340b89b17702eae51578b";
+  const detailsUrl = PRODUCTS_URL + "/" + param;
 
   useEffect(
     function () {
@@ -58,9 +55,19 @@ export default function ContentDetails() {
 
   return (
     <Layout>
-      <Heading>{content.name}</Heading>
-      <div dangerouslySetInnerHTML={{ __html: content.description }} />
-      <Link to="/">← Back to homepage</Link>
+      <div className="details-wrapper">
+        <img
+          src={content.image}
+          alt={content.title}
+          className="details-image"
+        />
+        <Heading>{content.title}</Heading>
+        <div dangerouslySetInnerHTML={{ __html: content.description }} />
+        <p>{content.price}$</p>
+        <Link to="/" className="back-link">
+          ← Back to homepage
+        </Link>
+      </div>
     </Layout>
   );
 }

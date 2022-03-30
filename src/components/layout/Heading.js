@@ -5,9 +5,9 @@ function Heading({ size = "1", children }) {
   return <VariableHeading>{children}</VariableHeading>;
 }
 
-// Heading.propTypes = {
-//   size: PropTypes.string,
-//   content: PropTypes.string.isRequired,
-// };
+Heading.propTypes = {
+  size: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
 
 export default Heading;

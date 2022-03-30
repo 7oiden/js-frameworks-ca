@@ -1,3 +1,11 @@
+h1, h2 {
+  padding-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
 .form-error {
   color: red;
 
@@ -19,4 +27,8 @@
   &:hover {
     color: goldenrod;
   }
+}
+
+.back-link {
+  padding-top: 2rem;
 }

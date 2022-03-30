@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "../common/Loader";
 import AlertMessage from "../common/AlertMessage";
-import { CONTENT_URL } from "../../constants/api";
+import { PRODUCTS_URL } from "../../constants/api";
 import Heading from "../layout/Heading";
 import ContentItem from "./ContentItem";
 import Row from "react-bootstrap/Row";
@@ -12,7 +12,7 @@ export default function ContentList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const url = CONTENT_URL;
+  const url = PRODUCTS_URL;
 
   console.log(url);
 
@@ -20,8 +20,8 @@ export default function ContentList() {
     async function getContent() {
       try {
         const response = await axios.get(url);
-        console.log("response", response.data.results);
-        setContent(response.data.results);
+        console.log("response", response.data);
+        setContent(response.data);
       } catch (error) {
         console.log(error);
         setError(error.toString());
@@ -47,16 +47,16 @@ export default function ContentList() {
 
   return (
     <>
-      <Heading size="2">List of games</Heading>
+      <Heading size="2">List of products</Heading>
       <Row className="gy-5">
         {content.map((item) => {
           return (
             <ContentItem
               key={item.id}
-              name={item.name}
-              image={item.background_image}
-              rating={item.rating}
-              param={item.slug}
+              title={item.title}
+              image={item.image}
+              price={item.price}
+              param={item.id}
             />
           );
         })}
