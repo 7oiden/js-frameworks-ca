@@ -92,7 +92,7 @@ export default function Login() {
                 )}
               </Form.Group>
 
-              <Button variant="primary" type="submit">
+              <Button className="form-button" variant="primary" type="submit">
                 {submitting ? "Wait..." : "Login"}
               </Button>
             </fieldset>

@@ -1,5 +1,12 @@
-h1, h2 {
+h1,
+h2 {
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
   padding-bottom: 1rem;
+  text-decoration: underline;
 }
 
 h3 {
@@ -17,18 +24,52 @@ h3 {
 .nav-link {
   font-size: 1.125rem;
   margin-left: 1rem;
+  cursor: pointer;
 }
 
 .brand-link {
   text-decoration: none;
-  color: goldenrod;
+  color: #89d99d;
   margin-right: 1rem;
 
   &:hover {
-    color: goldenrod;
+    color: #89d99d;
   }
 }
 
 .back-link {
   padding-top: 2rem;
+  font-size: 1.125rem;
+  text-decoration: underline;
+  transform: all 0.3s;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.home-paragraph {
+  font-size: 1.25rem;
+}
+
+.category {
+  text-transform: uppercase;
+  color: gray;
+}
+
+.price {
+  font-size: 1.25rem;
+  color: #ac5820;
+  padding-right: 1rem;
+  font-weight: bold;
+}
+
+.card-price {
+  float: right;
+}
+
+.detail-text {
+  padding-bottom: 1rem;
+  max-width: 1000px;
 }

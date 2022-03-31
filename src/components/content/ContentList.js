@@ -47,7 +47,7 @@ export default function ContentList() {
 
   return (
     <>
-      <Heading size="2">List of products</Heading>
+      <Heading size="2">Products:</Heading>
       <Row className="gy-5">
         {content.map((item) => {
           return (
@@ -55,6 +55,7 @@ export default function ContentList() {
               key={item.id}
               title={item.title}
               image={item.image}
+              category={item.category}
               price={item.price}
               param={item.id}
             />

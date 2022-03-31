@@ -5,8 +5,8 @@ import axios from "axios";
 import Loader from "../common/Loader";
 import AlertMessage from "../common/AlertMessage";
 import Heading from "../layout/Heading";
-import Layout from "../layout/Layout";
 import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 export default function ContentDetails() {
   const [content, setContent] = useState([]);
@@ -54,20 +54,18 @@ export default function ContentDetails() {
     );
 
   return (
-    <Layout>
-      <div className="details-wrapper">
-        <img
-          src={content.image}
-          alt={content.title}
-          className="details-image"
-        />
-        <Heading>{content.title}</Heading>
-        <div dangerouslySetInnerHTML={{ __html: content.description }} />
-        <p>{content.price}$</p>
-        <Link to="/" className="back-link">
-          ← Back to homepage
-        </Link>
-      </div>
-    </Layout>
+    <div className="details-wrapper">
+      <img src={content.image} alt={content.title} className="details-image" />
+      <Heading>{content.title}</Heading>
+      <div
+        className="detail-text"
+        dangerouslySetInnerHTML={{ __html: content.description }}
+      />
+      <p className="price">{content.price}$</p>
+      <Button disabled="true">Buy</Button>
+      <Link to="/" className="back-link">
+        ← Back to homepage
+      </Link>
+    </div>
   );
 }

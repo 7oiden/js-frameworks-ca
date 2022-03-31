@@ -49,75 +49,73 @@ export default function ContactForm() {
     reset();
   }
   return (
-      <div className="form-container">
-        <Form onSubmit={handleSubmit(onSubmit)}>
-          {submitted && (
-            <AlertMessage variant="success" message="Successfully submitted" />
+    <div className="form-container">
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        {submitted && (
+          <AlertMessage variant="success" message="Successfully submitted" />
+        )}
+
+        <Form.Group className="mb-3" controlId="formBasicFirstname">
+          <Form.Label>Firstname</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Firstname"
+            {...register("firstname")}
+          />
+          {errors.firstname && (
+            <FormError>{errors.firstname.message}</FormError>
           )}
+        </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicFirstname">
-            <Form.Label>Firstname</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Firstname"
-              {...register("firstname")}
-            />
-            {errors.firstname && (
-              <FormError>{errors.firstname.message}</FormError>
-            )}
-          </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicLastname">
+          <Form.Label>Lastname</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Lastname"
+            {...register("lastname")}
+          />
+          {errors.lastname && <FormError>{errors.lastname.message}</FormError>}
+        </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicLastname">
-            <Form.Label>Lastname</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Lastname"
-              {...register("lastname")}
-            />
-            {errors.lastname && (
-              <FormError>{errors.lastname.message}</FormError>
-            )}
-          </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Email"
+            {...register("email")}
+          />
+          {errors.email && <FormError>{errors.email.message}</FormError>}
+        </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Email"
-              {...register("email")}
-            />
-            {errors.email && <FormError>{errors.email.message}</FormError>}
-          </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicSubject">
+          <Form.Label>Subject</Form.Label>
+          <Form.Select
+            aria-label="Default select example"
+            {...register("subject")}
+          >
+            <option value="">Choose a subject</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </Form.Select>
+          {errors.subject && <FormError>{errors.subject.message}</FormError>}
+        </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicSubject">
-            <Form.Label>Subject</Form.Label>
-            <Form.Select
-              aria-label="Default select example"
-              {...register("subject")}
-            >
-              <option value="">Choose a subject</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </Form.Select>
-            {errors.subject && <FormError>{errors.subject.message}</FormError>}
-          </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicMessage">
+          <Form.Label>Message</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows="5"
+            placeholder="Start typing your message..."
+            {...register("message")}
+          />
+          {errors.message && <FormError>{errors.message.message}</FormError>}
+        </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicMessage">
-            <Form.Label>Message</Form.Label>
-            <Form.Control
-              as="textarea"
-              rows="5"
-              placeholder="Start typing your message..."
-              {...register("message")}
-            />
-            {errors.message && <FormError>{errors.message.message}</FormError>}
-          </Form.Group>
-
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
-      </div>
+        <Button className="form-button" variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </div>
   );
 }

@@ -16,9 +16,13 @@ main {
 .details-wrapper {
   background-color: white;
   padding: 2rem 5% 2rem 5%;
+  border-radius: 3px;
+}
+
+.form-button {
+  margin-top: 0.75rem;
 }
 
 .btn-primary {
-  margin-top: 1rem;
   font-size: 1.125rem;
 }
