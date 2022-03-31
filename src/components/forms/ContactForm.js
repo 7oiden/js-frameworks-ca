@@ -11,12 +11,12 @@ const schema = yup.object().shape({
   firstname: yup
     .string()
     .required("Please enter your firstname")
-    .min(3, "Your name must be at least 3 characters"),
+    .min(3, "Your firstname must be at least 3 characters"),
 
   lastname: yup
     .string()
     .required("Please enter your lastname")
-    .min(4, "Your name must be at least 4 characters"),
+    .min(4, "Your lastname must be at least 4 characters"),
 
   email: yup
     .string()
@@ -48,13 +48,16 @@ export default function ContactForm() {
     setSubmitted(true);
     reset();
   }
+
   return (
     <div className="form-container">
       <Form onSubmit={handleSubmit(onSubmit)}>
         {submitted && (
-          <AlertMessage variant="success" message="Successfully submitted" />
+          <AlertMessage
+            variant="success"
+            message="Your request was successfully submitted"
+          />
         )}
-
         <Form.Group className="mb-3" controlId="formBasicFirstname">
           <Form.Label>Firstname</Form.Label>
           <Form.Control
@@ -94,9 +97,9 @@ export default function ContactForm() {
             {...register("subject")}
           >
             <option value="">Choose a subject</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="feedback">Feedback</option>
+            <option value="shipping">Shipping</option>
+            <option value="returns">Returns</option>
           </Form.Select>
           {errors.subject && <FormError>{errors.subject.message}</FormError>}
         </Form.Group>

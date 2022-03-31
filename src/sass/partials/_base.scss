@@ -26,7 +26,6 @@ a {
 .card-link {
   display: block;
   color: black;
-  height: 100%;
 
   &:hover {
     color: black;
@@ -36,6 +35,7 @@ a {
 .card {
   transition: all 0.3s;
   opacity: 1;
+  position: relative;
 
   &:hover {
     opacity: 0.8;

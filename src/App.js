@@ -10,15 +10,15 @@ import Detail from "./components/pages/Detail";
 function App() {
   return (
     <AuthProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/detail/:param" element={<Detail />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/admin" element={<Admin />}></Route>
-        </Routes>
-      </Router>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/detail/:param" element={<Detail />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/admin" element={<Admin />}></Route>
+          </Routes>
+        </Router>
     </AuthProvider>
   );
 }
