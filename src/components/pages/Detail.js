@@ -1,10 +1,10 @@
 import Layout from "../layout/Layout";
-import ContentDetails from "../content/ContentDetails";
+import ProductDetails from "../products/ProductDetails";
 
 export default function Detail() {
   return (
     <Layout>
-      <ContentDetails />
+      <ProductDetails />
     </Layout>
   );
 }

@@ -4,11 +4,11 @@ import Loader from "../common/Loader";
 import AlertMessage from "../common/AlertMessage";
 import { PRODUCTS_URL } from "../../constants/api";
 import Heading from "../layout/Heading";
-import ContentItem from "./ContentItem";
+import ProductItem from "./ProductItem";
 import Row from "react-bootstrap/Row";
 
-export default function ContentList() {
-  const [content, setContent] = useState([]);
+export default function ProductsList() {
+  const [product, setproduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -17,11 +17,11 @@ export default function ContentList() {
   console.log(url);
 
   useEffect(function () {
-    async function getContent() {
+    async function getproduct() {
       try {
         const response = await axios.get(url);
         console.log("response", response.data);
-        setContent(response.data);
+        setproduct(response.data);
       } catch (error) {
         console.log(error);
         setError(error.toString());
@@ -30,7 +30,7 @@ export default function ContentList() {
       }
     }
 
-    getContent();
+    getproduct();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -49,9 +49,9 @@ export default function ContentList() {
     <>
       <Heading size="2">Products:</Heading>
       <Row className="gy-5">
-        {content.map((item) => {
+        {product.map((item) => {
           return (
-            <ContentItem
+            <ProductItem
               key={item.id}
               title={item.title}
               image={item.image}

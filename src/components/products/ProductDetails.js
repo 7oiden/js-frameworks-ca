@@ -8,8 +8,8 @@ import Heading from "../layout/Heading";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
-export default function ContentDetails() {
-  const [content, setContent] = useState([]);
+export default function ProductDetails() {
+  const [product, setproduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -29,7 +29,7 @@ export default function ContentDetails() {
         try {
           const response = await axios.get(detailsUrl);
           console.log("response:", response.data);
-          setContent(response.data);
+          setproduct(response.data);
         } catch (error) {
           console.log(error);
           setError(error.toString());
@@ -55,14 +55,14 @@ export default function ContentDetails() {
 
   return (
     <div className="details-wrapper">
-      <img src={content.image} alt={content.title} className="details-image" />
-      <Heading>{content.title}</Heading>
+      <img src={product.image} alt={product.title} className="details-image" />
+      <Heading>{product.title}</Heading>
       <div
         className="detail-text"
-        dangerouslySetInnerHTML={{ __html: content.description }}
+        dangerouslySetInnerHTML={{ __html: product.description }}
       />
-      <p className="price">{content.price}$</p>
-      <Button disabled="true">Buy</Button>
+      <p className="price">{product.price}$</p>
+      <Button disabled={true}>Buy</Button>
       <Link to="/" className="back-link">
         ← Back to homepage
       </Link>
