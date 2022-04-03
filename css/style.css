@@ -1,0 +1,189 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body {
+  background-color: #ececec;
+  height: 100%;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+main {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.flex-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-container {
+  background-color: #dbe6e9;
+  padding: 2rem;
+}
+
+.details-wrapper {
+  background-color: white;
+  padding: 2rem 5% 2rem 5%;
+  border-radius: 3px;
+}
+
+h1,
+h2 {
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  text-decoration: underline;
+  color: #164773;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.form-error {
+  color: red;
+}
+
+.form-error::before {
+  content: "* ";
+}
+
+.nav-link {
+  font-size: 1.125rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.brand-link {
+  text-decoration: none;
+  color: #89d99d;
+  margin-right: 1rem;
+}
+
+.brand-link:hover {
+  color: #89d99d;
+}
+
+.back-link {
+  padding-top: 2rem;
+  font-size: 1.125rem;
+  text-decoration: underline;
+  -webkit-transform: all 0.3s;
+          transform: all 0.3s;
+  opacity: 1;
+}
+
+.back-link:hover {
+  opacity: 0.6;
+}
+
+.home-paragraph {
+  font-size: 1.25rem;
+}
+
+.category {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: gray;
+}
+
+.price {
+  font-size: 1.25rem;
+  color: #ac5820;
+  padding-right: 1rem;
+  font-weight: bold;
+}
+
+.detail-text {
+  padding-bottom: 1rem;
+  max-width: 1000px;
+}
+
+.card {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 1;
+  position: relative;
+}
+
+.card:hover {
+  opacity: 0.8;
+}
+
+.card-link {
+  display: block;
+  color: black;
+}
+
+.card-link:hover {
+  color: black;
+}
+
+.card-img-top {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.card-price {
+  float: right;
+}
+
+.details-image {
+  width: 200px;
+  padding: 0 2rem 2rem 0;
+}
+
+figure {
+  display: block;
+  border-bottom: 1px solid #dadada;
+  margin: 0 1.5rem;
+}
+
+.form-button {
+  margin-top: 0.75rem;
+}
+
+.btn-primary {
+  font-size: 1.125rem;
+}
+
+footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: #1E5959;
+  color: #f4ffff;
+  text-align: center;
+  padding: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

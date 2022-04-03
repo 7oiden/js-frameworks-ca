@@ -3,6 +3,10 @@ main {
     padding-bottom: 100px;
 }
 
+.flex-wrapper {
+  flex: 1 0 auto;
+}
+
 .form-wrapper {
   max-width: 600px;
   margin: 0 auto;
@@ -19,10 +23,3 @@ main {
   border-radius: 3px;
 }
 
-.form-button {
-  margin-top: 0.75rem;
-}
-
-.btn-primary {
-  font-size: 1.125rem;
-}
