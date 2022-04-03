@@ -3,17 +3,16 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import axios from "axios";
 import AuthContext from "../../context/AuthContext";
+import axios from "axios";
+import { WP_BASE_URL, TOKEN_PATH } from "../../constants/api";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import FormError from "../common/FormError";
+import Button from "react-bootstrap/Button";
 import AlertMessage from "../common/AlertMessage";
-import { BASE_URL, TOKEN_PATH } from "../../constants/api";
 
-const loginUrl = BASE_URL + TOKEN_PATH;
 
-console.log(BASE_URL);
+const loginUrl = WP_BASE_URL + TOKEN_PATH;
 
 const schema = yup.object().shape({
   username: yup.string().required("Please enter your username"),
@@ -40,11 +39,11 @@ export default function LoginForm() {
     setSubmitting(true);
     setLoginError(null);
 
-    console.log(data);
+    // console.log(data);
 
     try {
       const response = await axios.post(loginUrl, data);
-      console.log("response:", response.data);
+      // console.log("response:", response.data);
       setAuth(response.data);
       history("/admin");
     } catch (error) {
@@ -90,7 +89,7 @@ export default function LoginForm() {
               </Form.Group>
 
               <Button className="form-button" variant="primary" type="submit">
-                {submitting ? "Wait..." : "Login"}
+                {submitting ? "Hold on..." : "Login"}
               </Button>
             </fieldset>
           </Form>

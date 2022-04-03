@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import FormError from "../common/FormError";
+import Button from "react-bootstrap/Button";
 import AlertMessage from "../common/AlertMessage";
 
 const schema = yup.object().shape({
@@ -44,7 +44,7 @@ export default function ContactForm() {
   });
 
   function onSubmit(data) {
-    console.log(data);
+    // console.log(data);
     setSubmitted(true);
     reset();
   }

@@ -1,14 +1,13 @@
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
-import { Link } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
-import LoginLink from "../login/LoginLink";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import { NavLink, Link } from "react-router-dom";
 import LogoutLink from "../login/LogoutLink";
+import LoginLink from "../login/LoginLink";
 
-export default function CustomNav(props) {
-  const { home, contact, login } = props;
+export default function CustomNav() {
   const [auth, setAuth] = useContext(AuthContext);
 
   return (
@@ -22,20 +21,23 @@ export default function CustomNav(props) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/" className={home ? "nav-link active" : "nav-link"}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
               Home
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/contact"
-              className={contact ? "nav-link active" : "nav-link"}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               Contact
-            </Link>
-            {auth ? (
-              <LogoutLink />
-            ) : (
-              <LoginLink login={login} />
-            )}
+            </NavLink>
+            {auth ? <LogoutLink /> : <LoginLink />}
           </Nav>
         </Navbar.Collapse>
       </Container>

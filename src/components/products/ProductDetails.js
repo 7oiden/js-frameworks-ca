@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { PRODUCTS_URL } from "../../constants/api";
 import axios from "axios";
 import Loader from "../common/Loader";
 import AlertMessage from "../common/AlertMessage";
 import Heading from "../layout/Heading";
-import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 export default function ProductDetails() {
   const [product, setproduct] = useState([]);
@@ -28,7 +28,7 @@ export default function ProductDetails() {
       async function getDetails() {
         try {
           const response = await axios.get(detailsUrl);
-          console.log("response:", response.data);
+          // console.log("response:", response.data);
           setproduct(response.data);
         } catch (error) {
           console.log(error);

@@ -1,6 +1,6 @@
 import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+import Card from "react-bootstrap/Card";
 
 export default function ProductItem(props) {
   const { title, image, category, price, param } = props;

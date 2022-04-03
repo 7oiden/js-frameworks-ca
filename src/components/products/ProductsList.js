@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
+import { PRODUCTS_URL } from "../../constants/api";
 import axios from "axios";
 import Loader from "../common/Loader";
 import AlertMessage from "../common/AlertMessage";
-import { PRODUCTS_URL } from "../../constants/api";
 import Heading from "../layout/Heading";
-import ProductItem from "./ProductItem";
 import Row from "react-bootstrap/Row";
+import ProductItem from "./ProductItem";
+
 
 export default function ProductsList() {
   const [product, setproduct] = useState([]);
@@ -14,13 +15,11 @@ export default function ProductsList() {
 
   const url = PRODUCTS_URL;
 
-  console.log(url);
-
   useEffect(function () {
     async function getproduct() {
       try {
         const response = await axios.get(url);
-        console.log("response", response.data);
+        // console.log("response", response.data);
         setproduct(response.data);
       } catch (error) {
         console.log(error);

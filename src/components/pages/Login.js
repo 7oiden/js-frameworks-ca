@@ -4,9 +4,9 @@ import LoginForm from "../forms/LoginForm";
 
 export default function Login() {
   return (
-    <Layout login>
+    <Layout>
       <div className="form-wrapper">
-        <Heading>Contact</Heading>
+        <Heading>Admin login</Heading>
         <LoginForm />
       </div>
     </Layout>

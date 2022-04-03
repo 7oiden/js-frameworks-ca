@@ -1,8 +1,8 @@
-import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
+import { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import Heading from "../layout/Heading";
 import Layout from "../layout/Layout";
+import Heading from "../layout/Heading";
 
 export default function Admin() {
   const [auth, setAuth] = useContext(AuthContext);
