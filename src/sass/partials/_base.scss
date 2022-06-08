@@ -9,9 +9,10 @@ html {
   flex-direction: column;
 }
 
-body {
-  background-color: rgb(236, 236, 236);
+#root {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 a {

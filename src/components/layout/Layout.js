@@ -5,8 +5,9 @@ export default function Layout({ children }) {
   return (
     <>
       <div className="flex-wrapper">
-        <header></header>
-        <CustomNav />
+        <header>
+          <CustomNav />
+        </header>
         <main>
           <Container>{children}</Container>
         </main>
