@@ -31,13 +31,13 @@ Display at least 2 properties from each result.
 
 Each result should link to the detail page, passing a parameter in the URL.
 
-<h3>Details</h3>:
+<h3>Details:</h3>
 
 Retrieve the parameter from the URL and use it in an API call to fetch one item.
 
 Display at least 3 properties from the item.
 
-<h3>Login</h3>:
+<h3>Login:</h3>
 
 - Create a form with username/email and password fields. The inputs should have the necessary validation for a login form (not a registration form).
 - The form should make a login request to either a Wordpress API with the JWT plugin installed or a Strapi API. If the login is successful redirect the user to the admin route.
@@ -90,10 +90,6 @@ To run the app, run the following commands:
 ```bash
 npm run start
 ```
-
-## Contributing
-
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
 
 ## Contact
 
