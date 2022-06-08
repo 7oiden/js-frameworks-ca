@@ -7,12 +7,11 @@ An overview of the products is shown in a grid at the homepage.
 ## Description
 
 A simple app created in React that uses JWT tokens from a Wordpress extension for login functionality.
-It fetches some random products from the Fake Store API and displayes some of the properties on product cards as well as on a product details page,
-when a specific card is clicked.
+It fetches some random products from the Fake Store API and displayes some of the properties on the product cards and the details pages.
 
 <h2>Assignment requirements:</h2>
 
-Your app should have the following paths:
+The app should have the following paths:
 
 - "/"
 - "/detail/:param"
@@ -41,7 +40,7 @@ Display at least 3 properties from the item.
 
 <h3>Login:</h3>
 
-- Create a form with username/email and password fields. The inputs should have the necessary validation for a login form (not a registration form).
+- Create a form with username/email and password fields. The inputs should have the necessary validation for a login form.
 - The form should make a login request to either a Wordpress API with the JWT plugin installed or a Strapi API. If the login is successful redirect the user to the admin route.
 - If the login is unsuccessful display a message above the form.
 
