@@ -7,7 +7,8 @@ An overview of the products is shown in a grid at the homepage.
 ## Description
 
 A simple app created in React that uses JWT tokens from a Wordpress extension for login functionality.
-It fetches some random products from the Fake Store API and displayes some of the properties on product cards as well as on a product details page.
+It fetches some random products from the Fake Store API and displayes some of the properties on product cards as well as on a product details page,
+when a specific card is clicked.
 
 <h2>Assignment requirements:</h2>
 
