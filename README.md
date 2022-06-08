@@ -92,6 +92,6 @@ npm run start
 
 ## Contact
 
-I can be contacted at:
+Get in touch at:
 
-[My LinkedIn page](https://www.linkedin.com/in/tommy-j-16b56678/)
+[LinkedIn](https://www.linkedin.com/in/tommy-j-16b56678/)
