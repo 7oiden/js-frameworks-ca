@@ -8,7 +8,8 @@ An overview of the products is shown in a grid at the homepage.
 
 A simple app created in React that uses JWT tokens from Wordpress for login functionality, and fetches some random products from the Fake Store API.
 
-Assignment requirements:
+<hr/>
+<h2>Assignment requirements:</h2>
 
 Your app should have the following paths:
 
@@ -26,10 +27,6 @@ Find an API that returns at least:
 
 -   an array of items
 -   a single item retrieved by a parameter (id, name, slug, etc)
-
-If you are using Next you can also hard-code json and return it from API routes created in `pages/api/*`.
-
-You can use your own Wordpress or Strapi or any other API that you have created for these calls but it must be publically hosted - it must not be running on your localhost.
 
 Display at least 2 properties from each result.
 
@@ -61,9 +58,9 @@ Create a form with the following inputs and validation:
 -   Subject - required, this must be a select box with at least 2 options
 -   Message - required, minimum 10 characters.
 
-## Built With
+<hr/>
 
-You can list a the tech stack that you've used over here
+## Built With
 
 - [React.js](https://reactjs.org/)
 - [Bootstrap](https://getbootstrap.com)
@@ -105,14 +102,4 @@ Here you can detail any information you want to provide regarding contributing t
 
 This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
 
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+[My LinkedIn page](https://www.linkedin.com/in/tommy-j-16b56678/)
