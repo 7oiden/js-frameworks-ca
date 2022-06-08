@@ -19,7 +19,7 @@ The app should have the following paths:
 - "/login"
 - "/admin"
 
-The admin path won't appear in your navigation.
+The admin path should not appear in the navigation.
 
 <h3>Home:</h3>
 
