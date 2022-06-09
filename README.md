@@ -64,6 +64,10 @@ Create a form with the following inputs and validation:
 - [Bootstrap](https://getbootstrap.com)
 - [Sass](https://sass-lang.com)
 
+## API
+
+- [Fake Store API](https://fakestoreapi.com/)
+
 ## Getting Started
 
 ### Installing
