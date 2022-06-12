@@ -61,7 +61,7 @@ Create a form with the following inputs and validation:
 ## Built With
 
 - [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
 - [Sass](https://sass-lang.com)
 
 ## API
