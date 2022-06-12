@@ -23,7 +23,7 @@ The app should have the following paths:
 
 The admin path should not appear in the navigation.
 
-#### Homepage:
+### Homepage:
 
 Find an API that returns at least:
 
@@ -34,23 +34,23 @@ Display at least 2 properties from each result.
 
 Each result should link to the detail page, passing a parameter in the URL.
 
-#### Details page:
+### Details page:
 
 Retrieve the parameter from the URL and use it in an API call to fetch one item.
 
 Display at least 3 properties from the item.
 
-#### Login:
+### Login:
 
 - Create a form with username/email and password fields. The inputs should have the necessary validation for a login form.
 - The form should make a login request to either a Wordpress API with the JWT plugin installed or a Strapi API. If the login is successful redirect the user to the admin route.
 - If the login is unsuccessful display a message above the form.
 
-#### Admin page:
+### Admin page:
 
 - This page will simply display an "Admin" heading.
 
-#### Contact page:
+### Contact page:
 
 Create a form with the following inputs and validation:
 
