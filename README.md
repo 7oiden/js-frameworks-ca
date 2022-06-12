@@ -60,6 +60,8 @@ Create a form with the following inputs and validation:
 - Subject - required, this must be a select box with at least 2 options
 - Message - required, minimum 10 characters.
 
+<hr/>
+
 ## Built With
 
 - [React.js](https://reactjs.org/)
